@@ -7,4 +7,16 @@ class ParamsController < ApplicationController
     @answer = 42
     @guess = params['guess'].to_i
   end
+
+  def url_number_guess
+    answer = 67
+    @guess = params[:guess].to_i
+    if @guess < answer
+      @message = 'higher'
+    elsif @guess > answer
+      @message = 'lower'
+    else
+      @message = 'yup'
+    end
+  end
 end
