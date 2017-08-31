@@ -19,4 +19,21 @@ class ParamsController < ApplicationController
       @message = 'yup'
     end
   end
+
+  def guess_form
+
+  end
+
+  def guess_result
+    answer = 56
+    @guess = params[:guess_input].to_i
+
+    if @guess < answer
+      @message = 'higher'
+    elsif @guess > answer
+      @message = 'lower'
+    else
+      @message = 'yup'
+    end
+  end
 end
