@@ -1,0 +1,9 @@
+<h1>GUESS A NUMBER BETWEEN 1 AND 100! DO IT NOW!!!</h1>
+
+<% if @guess == @answer %>
+  <h1>Hey you got it good job man I'm proud of you.</h1>
+<% elsif @guess < @answer %>
+  <h1>HIGHER YOU FOOL!</h1>
+<% elsif @guess > @answer %>
+  <h1>LOWER YOU FOOL!</h1>
+<% end %>
